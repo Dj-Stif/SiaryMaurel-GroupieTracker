@@ -1,0 +1,49 @@
+{{define "monsters"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsters</title>
+    <link rel="stylesheet" href="/static/css/monsters.css">
+</head>
+<body>
+    <header>
+        <div class="catégories">
+            <a href="/armures">
+                <p>Armor</p>
+            </a>
+            <a href="/weapons">
+                <p>Weapons</p>
+            </a>
+            <a href="/monsters" class="current-page">
+                <p>Monsters</p>
+            </a>
+        </div>
+        <div class="logo">
+            <a href="/">
+                <img src="/static/img/MonsterHunterWorldLogo.png" alt="logo">
+            </a>
+        </div>
+        <div class="search-logo">
+            <form action="/search" method="post">
+                <input type="text" placeholder="Rechercher">
+                <button type="submit" class="button-submit"></button>
+            </form>
+        </div>
+    </header>
+    {{range .}}
+    <div class="carte-monsters">
+        <p>{{.Type}}</p>
+        <img src="A REMPLIR" alt="Image {{.Name}}">
+        <p>{{.Name}}</p>
+        <div class="species-weaknesses">
+            <p>{{.Species}}</p>
+            <p>{{.Weaknesses}}</p>
+            <p>{{.Description}}</p>
+        </div>
+    </div>
+    {{end}}
+</body>
+</html>
+{{end}}

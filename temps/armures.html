@@ -1,0 +1,50 @@
+{{define "armures"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/armures.css">
+</head>
+<body>
+    <header>
+        <div class="catégories">
+            <a href="/armures" class="current-page">
+                <p>Armor</p>
+            </a>
+            <a href="/weapons">
+                <p>Weapons</p>
+            </a>
+            <a href="/monsters">
+                <p>Monsters</p>
+            </a>
+        </div>
+        <div class="logo">
+            <a href="/">
+                <img src="/static/img/MonsterHunterWorldLogo.png" alt="logo">
+            </a>
+        </div>
+        <div class="search-logo">
+            <form action="/search" method="post">
+                <input type="text" placeholder="Rechercher">
+                <button type="submit" class="button-submit"></button>
+            </form>
+        </div>
+    </header>
+    {{range .}}
+    <div class="carte-armure">
+        {{range .Pieces}}
+        <p>{{.Type}}</p>
+        <img src="{{.Assets.ImageMale}}" alt="Image {{.Name}}">
+        <p>{{.Name}}</p>
+        <div class="rank-rarity">
+            <p>{{.Rank}}</p>
+            <p>{{.Rarity}}/12</p>
+        </div>
+        {{end}}
+    </div>
+    {{end}}
+</body>
+</html>
+{{end}}
