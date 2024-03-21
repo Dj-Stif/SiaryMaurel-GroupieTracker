@@ -1,3 +1,257 @@
-.current-page {
-    background-image: url(/assets/img/boutton-mhw.png);
+* {
+    padding: 0;
+    margin: 0;
 }
+
+
+.current-page {
+    background-image: url(/static/img/boutton-mhw.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.button-submit {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    background-color: #ffcd82;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-header-global {
+    position: absolute;
+    height: 16%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+}
+
+.img-header {
+    width: 100%;
+    height: auto;
+    top: 0;
+    translate: 0 -3px;
+}
+
+.img-header-bottom {
+    width: 100%;
+    height: auto;
+}
+
+.img-header > img,
+.img-header-bottom > img {
+    height: 100%;
+    width: 100%;
+}
+
+.catégories {
+    height: 150px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1000;
+}
+
+.catégories a p {
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 3px 3px 4px black;
+}
+
+.catégories a {
+    text-decoration: none;
+    text-transform: none;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 20%;
+    z-index: 1000;
+}
+
+.logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a img {
+    width: 70%;
+}
+
+.search-logo {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+.log-in {
+    width: 50px;
+    z-index: 1000;
+}
+
+.search-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .search-header__input {
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #0a0a0a;
+    border: solid 0.5px #525252;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 25px;
+    width: 240px;
+    height: 20px;
+    transition: all ease-in-out 0.5s;
+    margin-right: -2rem;
+    opacity: 1;
+    text-align: center;
+  }
+  
+  .search-header__input:hover,
+  .search-header__input:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  .search-header__input:focus {
+    outline: none;
+    background-color: #0a0a0aad;
+  }
+  
+  .search-header__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #969696;
+  }
+  
+  .search-header__input:focus + .search-header__button {
+    background-color: transparent;
+  }
+  
+  .search-header__button {
+    border: none;
+    background-color: transparent;
+    margin-top: 0.1em;
+  }
+  
+  .search-header__button:hover {
+    cursor: pointer;
+  }
+  
+  .search-header__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #969696;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    text-shadow: 1px 1px 3px black;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #ffcd82;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(
+      120deg,
+      #ff6e6e 60%,
+      rgb(255, 231, 222) 88%,
+      rgb(255, 211, 195) 40%,
+      rgba(159, 255, 80, 0.603) 48%
+    );
+    color: #333333;
+    text-shadow: 1px 1px 3px black;
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(
+      120deg,
+      #ff0000 30%,
+      #fabe65 88%,
+      bisque 40%,
+      rgb(249, 255, 160) 78%
+    );
+    color: #333333;
+    text-shadow: 1px 1px 3px black;
+    transform: rotateY(180deg);
+  }
+  
+  .carte-weapons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .section-weapons-global {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 50px;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }

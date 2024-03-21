@@ -24,10 +24,15 @@ L'objectif principal de l'application est de fournir aux utilisateurs des inform
 Pour alimenter Groupie Tracker en contenu, l'application exploite au minimum trois endpoints différents de l'API Monster Hunter World. Ces endpoints peuvent inclure :
 
 - Monstres : Récupération des informations détaillées sur les monstres, y compris leurs noms, images, statistiques, etc.
-- Armes :
-- Armures :
+- Armes : Récupération des informations sur les armes, y compris leurs noms, images, statistiques, etc.
+- Armures : Récupération des informations sur les armures, y compris leurs noms, images, statistiques, etc.
+- 
 
 ## Technologies
 
 - HTML5, CSS3 pour la structure et le style de l'interface utilisateur.
 - API de Monster Hunter World pour récupérer les données sur les monstres.
+
+## Auteurs
+
+- [Louka Siary Maurel](https://github.com/Dj-Stiff)

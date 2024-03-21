@@ -6,43 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weapons</title>
     <link rel="stylesheet" href="/static/css/weapons.css">
+    <link rel="stylesheet" href="/static/css/background.css" />
 </head>
 <body>
     <header>
+        <div class="img-header-global">
+          <div class="img-header">
+            <img src="/static/img/bg_h2_top.png" alt="" />
+          </div>
+          <div class="img-header-bottom">
+            <img src="/static/img/bg_h2_bottom.png" alt="" />
+          </div>
+        </div>
         <div class="catégories">
-            <a href="/armures">
-                <p>Armor</p>
-            </a>
-            <a href="/weapons" class="current-page">
-                <p>Weapons</p>
-            </a>
-            <a href="/monsters">
-                <p>Monsters</p>
-            </a>
+          <a href="/armures">
+            <p>Armor</p>
+          </a>
+          <a href="/weapons" class="current-page">
+            <p>Weapons</p>
+          </a>
+          <a href="/monsters">
+            <p>Monsters</p>
+          </a>
         </div>
         <div class="logo">
-            <a href="/">
-                <img src="/static/img/MonsterHunterWorldLogo.png" alt="logo">
-            </a>
+          <a href="/">
+            <img src="/static/img/MonsterHunterWorldLogo.png" alt="logo" />
+          </a>
         </div>
         <div class="search-logo">
-            <form action="/search" method="post">
-                <input type="text" placeholder="Rechercher">
-                <button type="submit" class="button-submit"></button>
-            </form>
+          <form action="/search" method="post">
+            <div class="search-header">
+              <input
+                placeholder="Search"
+                class="search-header__input"
+                type="text"
+              />
+              <button class="search-header__button">
+                <svg
+                  fill="none"
+                  viewBox="0 0 18 18"
+                  height="18"
+                  width="18"
+                  class="search-header__icon"
+                >
+                  <path
+                    fill="#969696"
+                    d="M7.132 0C3.197 0 0 3.124 0 6.97c0 3.844 3.197 6.969 7.132 6.969 1.557 0 2.995-.49 4.169-1.32L16.82 18 18 16.847l-5.454-5.342a6.846 6.846 0 0 0 1.718-4.536C14.264 3.124 11.067 0 7.132 0zm0 .82c3.48 0 6.293 2.748 6.293 6.15 0 3.4-2.813 6.149-6.293 6.149S.839 10.37.839 6.969C.839 3.568 3.651.82 7.132.82z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+          <div class="log-in">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="ionicon"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M258.9 48C141.92 46.42 46.42 141.92 48 258.9c1.56 112.19 92.91 203.54 205.1 205.1 117 1.6 212.48-93.9 210.88-210.88C462.44 140.91 371.09 49.56 258.9 48zm126.42 327.25a4 4 0 01-6.14-.32 124.27 124.27 0 00-32.35-29.59C321.37 329 289.11 320 256 320s-65.37 9-90.83 25.34a124.24 124.24 0 00-32.35 29.58 4 4 0 01-6.14.32A175.32 175.32 0 0180 259c-1.63-97.31 78.22-178.76 175.57-179S432 158.81 432 256a175.32 175.32 0 01-46.68 119.25z"
+              />
+              <path
+                d="M256 144c-19.72 0-37.55 7.39-50.22 20.82s-19 32-17.57 51.93C191.11 256 221.52 288 256 288s64.83-32 67.79-71.24c1.48-19.74-4.8-38.14-17.68-51.82C293.39 151.44 275.59 144 256 144z"
+              />
+            </svg>
+          </div>
         </div>
-    </header>
-    {{range .}}
-    <div class="carte-weapons">
-        <p>{{.Type}}</p>
-        <img src="{{.Assets.Image}}" alt="Image {{.Name}}">
-        <p>{{.Name}}</p>
-        <div class="damagetype-rarity">
-            <p>{{.DamageType}}</p>
-            <p>{{.Rarity}}/12</p>
+      </header>
+    <section class="section-weapons-global">
+        {{range .}}
+        <div class="carte-weapons">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{.Assets.Image}}" alt="Image {{.Name}}" />
+                <p class="title">{{.Name}}</p>
+              </div>
+              <div class="flip-card-back">
+                <p class="title">STATS</p>
+                <p>{{.Type}}</p>
+                <p>{{.Rarity}}/12</p>
+                <p>{{.DamageType}}</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    {{end}}
+        {{end}}
+      </section>
 </body>
 </html>
 {{end}}
