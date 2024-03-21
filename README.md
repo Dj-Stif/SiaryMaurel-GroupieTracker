@@ -5,7 +5,7 @@
 * [Groupie Tracker - Application Web pour Suivre les Monstres de Monster Hunter World](#groupie-tracker---application-web-pour-suivre-les-monstres-de-monster-hunter-world)
   * [Description du Projet](#description-du-projet)
   * [Fonctionnalités](#fonctionnalités)
-  * [Technologies :](#technologies-)
+  * [Technologies](#technologies-)
 <!-- TOC -->
 
 ## Description du Projet
@@ -27,7 +27,7 @@ Pour alimenter Groupie Tracker en contenu, l'application exploite au minimum tro
 - Armes :
 - Armures :
 
-## Technologies :
+## Technologies
 
 - HTML5, CSS3 pour la structure et le style de l'interface utilisateur.
 - API de Monster Hunter World pour récupérer les données sur les monstres.
