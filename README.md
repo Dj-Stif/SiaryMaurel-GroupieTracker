@@ -1,6 +1,13 @@
 
 # Groupie Tracker - Application Web pour Suivre les Monstres de Monster Hunter World
 
+<!-- TOC -->
+* [Groupie Tracker - Application Web pour Suivre les Monstres de Monster Hunter World](#groupie-tracker---application-web-pour-suivre-les-monstres-de-monster-hunter-world)
+  * [Description du Projet](#description-du-projet)
+  * [Fonctionnalités](#fonctionnalités)
+  * [Technologies :](#technologies-)
+<!-- TOC -->
+
 ## Description du Projet
 
 L'objectif principal de l'application est de fournir aux utilisateurs des informations sur les monstres du jeu en exploitant les données disponibles via l'API de Monster Hunter World. Les joueurs pourront ainsi suivre les informations sur leurs monstres préférés, telles que leurs caractéristiques, leurs emplacements et leurs habitudes.
